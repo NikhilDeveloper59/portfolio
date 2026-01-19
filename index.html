@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nikhil Kumar | Portfolio</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1034/1034131.png" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <header class="header">
+    <nav class="navbar container">
+      <a href="#home" class="logo">Nikhil<span>.</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a class="nav-item active" href="#home">Home</a></li>
+        <li><a class="nav-item" href="#about">About</a></li>
+        <li><a class="nav-item" href="#skills">Skills</a></li>
+        <li><a class="nav-item" href="#projects">Projects</a></li>
+        <li><a class="nav-item" href="#education">Education</a></li>
+        <li><a class="nav-item" href="#certifications">Certifications</a></li>
+        <li><a class="nav-item" href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeBtn" title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <button class="icon-btn mobile-btn" id="menuBtn" title="Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== Hero Section ===== -->
+  <section id="home" class="hero section">
+    <div class="container hero-grid">
+
+      <!-- LEFT -->
+      <div class="hero-text reveal">
+        <p class="badge">Final Year CSE (AI) • 2022-2026</p>
+
+        <h1>Hi, I'm <span class="hero-name">Nikhil Kumar</span></h1>
+
+        <p class="hero-subline">Software Developer • DSA in C++</p>
+
+        <h2 class="typing">
+          <span id="typingText"></span>
+          <span class="cursor">|</span>
+        </h2>
+
+        <p class="desc">
+          Software Developer passionate about <b>DSA in C++</b>, Web Development and Python-based projects.
+          I completed a <b>1-month internship</b> in <b>Patna Smart City</b>.
+        </p>
+
+        <div class="hero-buttons">
+          <a class="btn primary" href="#projects"><i class="fa-solid fa-code"></i> View Projects</a>
+          <a class="btn outline" href="resume.pdf" download>
+            <i class="fa-solid fa-download"></i> Download Resume
+          </a>
+        </div>
+
+        <div class="socials">
+          <a href="mailto:nraaz590@gmail.com" class="social" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="tel:+917563990259" class="social" title="Phone"><i class="fa-solid fa-phone"></i></a>
+          <a href="https://github.com/NikhilDeveloper59" target="_blank" class="social" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/nikhil-kumar-ab451018b" target="_blank" class="social" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <!-- RIGHT PROFILE CARD -->
+      <div class="hero-card reveal">
+        <div class="profile-card pro-card">
+
+          <div class="pro-header">
+            <div class="pro-img">
+              <img src="profile.jpg" alt="Nikhil Kumar">
+            </div>
+
+            <div class="pro-title">
+              <h3>Nikhil Kumar</h3>
+              <p>CSE (AI) Undergraduate</p>
+            </div>
+          </div>
+
+          <div class="pro-divider"></div>
+
+          <div class="pro-info">
+            <div class="pro-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Gaya, Bihar</span>
+            </div>
+
+            <div class="pro-item">
+              <i class="fa-solid fa-building-columns"></i>
+              <span>Government Engineering College, Munger</span>
+            </div>
+
+            <div class="pro-item">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <span>Session: 2022 - 2026</span>
+            </div>
+
+            <div class="pro-item">
+              <i class="fa-solid fa-star"></i>
+              <span>CGPA: 8.5</span>
+            </div>
+          </div>
+
+          <div class="pro-divider"></div>
+
+          <div class="pro-buttons">
+            <a href="#contact" class="btn primary w-full">
+              <i class="fa-solid fa-paper-plane"></i> Hire / Contact Me
+            </a>
+
+            <a href="resume.pdf" download class="btn outline w-full">
+              <i class="fa-solid fa-download"></i> Download Resume
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>About Me</h2>
+        <p>My introduction, internship experience & goals</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card reveal box-hover">
+          <h3>Professional Summary</h3>
+          <p>
+            I am <b>Nikhil Kumar</b>, CSE (AI) student (Session 2022-26). I have strong command in
+            <b>C, C++, Python</b> and modern frontend technologies.
+          </p>
+          <p>
+            I completed a <b>1-month internship</b> at <b>Patna Smart City</b> and I am focused on becoming a
+            strong <b>Software Developer</b>.
+          </p>
+        </div>
+
+        <div class="about-card reveal box-hover">
+          <h3>Quick Highlights</h3>
+          <ul class="ticks">
+            <li>✅ DSA in C++ (Strong problem solving)</li>
+            <li>✅ Frontend Developer (HTML/CSS/JS/React)</li>
+            <li>✅ Python projects & AI/ML basics</li>
+            <li>✅ Git & GitHub workflow</li>
+            <li>✅ Cyber Security fundamentals</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Skills ===== -->
+  <section id="skills" class="section soft-bg">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Skills</h2>
+        <p>Languages, tools & technologies I work with</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-box reveal box-hover">
+          <h3><i class="fa-solid fa-code"></i> Programming</h3>
+
+          <div class="skill-item"><span>C</span><span>90%</span></div>
+          <div class="bar"><div class="fill" style="width: 90%"></div></div>
+
+          <div class="skill-item"><span>C++ (DSA)</span><span>92%</span></div>
+          <div class="bar"><div class="fill" style="width: 92%"></div></div>
+
+          <div class="skill-item"><span>Python</span><span>80%</span></div>
+          <div class="bar"><div class="fill" style="width: 80%"></div></div>
+
+          <div class="skill-item"><span>Java</span><span>65%</span></div>
+          <div class="bar"><div class="fill" style="width: 65%"></div></div>
+        </div>
+
+        <div class="skill-box reveal box-hover">
+          <h3><i class="fa-solid fa-globe"></i> Web Development</h3>
+          <div class="tags">
+            <span class="tag">HTML</span><span class="tag">CSS</span>
+            <span class="tag">JavaScript</span><span class="tag">React</span>
+            <span class="tag">Responsive UI</span>
+          </div>
+        </div>
+
+        <div class="skill-box reveal box-hover">
+          <h3><i class="fa-solid fa-database"></i> Database & Tools</h3>
+          <div class="tags">
+            <span class="tag">MongoDB</span><span class="tag">Git</span>
+            <span class="tag">GitHub</span><span class="tag">VS Code</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Projects ===== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Projects</h2>
+        <p>Some of my best work</p>
+      </div>
+
+      <div class="filter-bar reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="python">Python</button>
+        <button class="filter-btn" data-filter="ai">AI/ML</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+      </div>
+
+      <div class="project-grid">
+
+        <div class="project-card reveal box-hover" data-category="python ai">
+          <div class="project-top">
+            <h3>Jarvis AI Assistant</h3>
+            <span class="pill">Python</span>
+          </div>
+          <p>A voice based AI assistant that can open websites, search Wikipedia, play YouTube songs and more.</p>
+          <div class="tech">
+            <span>Python</span><span>Speech Recognition</span><span>pyttsx3</span><span>Wikipedia API</span>
+          </div>
+          <div class="project-actions">
+            <a class="btn small outline" target="_blank" href="https://github.com/NikhilDeveloper59">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card reveal box-hover" data-category="ai">
+          <div class="project-top">
+            <h3>Plant Disease Detection</h3>
+            <span class="pill">AI/ML</span>
+          </div>
+          <p>Deep Learning based system to predict plant diseases using leaf images for early detection.</p>
+          <div class="tech">
+            <span>Deep Learning</span><span>CNN</span><span>Python</span>
+          </div>
+          <div class="project-actions">
+            <a class="btn small outline" target="_blank" href="https://github.com/NikhilDeveloper59">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card reveal box-hover" data-category="web">
+          <div class="project-top">
+            <h3>Portfolio Website</h3>
+            <span class="pill">Web</span>
+          </div>
+          <p>Responsive portfolio with dark/light mode, animations, filtering & contact validation.</p>
+          <div class="tech">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <div class="project-actions">
+            <a class="btn small outline" target="_blank" href="https://github.com/NikhilDeveloper59">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Education ===== -->
+  <section id="education" class="section soft-bg">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Education</h2>
+        <p>My academic timeline</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item reveal box-hover">
+          <div class="dot"></div>
+          <div class="timeline-content">
+            <h3>B.Tech - CSE (AI)</h3>
+            <p>Government Engineering College, Munger</p>
+            <span class="time">2022 - 2026 • CGPA: 8.5</span>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal box-hover">
+          <div class="dot"></div>
+          <div class="timeline-content">
+            <h3>12th (Senior Secondary)</h3>
+            <p>BSEB, Patna</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal box-hover">
+          <div class="dot"></div>
+          <div class="timeline-content">
+            <h3>10th (Secondary)</h3>
+            <p>BSEB, Patna</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Certifications ===== -->
+  <section id="certifications" class="section">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Certifications</h2>
+        <p>Courses & certifications I completed</p>
+      </div>
+
+      <div class="cert-grid">
+        <div class="cert-card reveal box-hover">
+          <h3>Problem Solving Through Programming in C</h3>
+          <p>NPTEL • Score: 76</p>
+        </div>
+        <div class="cert-card reveal box-hover">
+          <h3>Introduction to Operating Systems (Elite)</h3>
+          <p>NPTEL • Score: 69</p>
+        </div>
+        <div class="cert-card reveal box-hover">
+          <h3>Web Development</h3>
+          <p>HTML, CSS, JS</p>
+        </div>
+        <div class="cert-card reveal box-hover">
+          <h3>Cyber Security Fundamentals</h3>
+          <p>Ethical hacking & basics</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section id="contact" class="section soft-bg">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Contact Me</h2>
+        <p>Let's build something great together</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal box-hover">
+          <h3>Get in touch</h3>
+          <p>If you have a project idea or internship/job opportunity, message me.</p>
+
+          <div class="contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <small>Email</small>
+              <a href="mailto:nraaz590@gmail.com">nraaz590@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <small>Phone</small>
+              <a href="tel:+917563990259">+91 7563990259</a>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form reveal box-hover" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" id="name" placeholder="Enter name" />
+              <small class="error" id="nameError"></small>
+            </div>
+
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" id="email" placeholder="Enter email" />
+              <small class="error" id="emailError"></small>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Subject</label>
+            <input type="text" id="subject" placeholder="Ex: Internship Opportunity" />
+            <small class="error" id="subjectError"></small>
+          </div>
+
+          <div class="form-group">
+            <label>Message</label>
+            <textarea id="message" rows="5" placeholder="Write your message..."></textarea>
+            <small class="error" id="messageError"></small>
+          </div>
+
+          <button type="submit" class="btn primary w-full">
+            <i class="fa-solid fa-paper-plane"></i> Send Message
+          </button>
+
+          <p class="success" id="successMsg"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer-flex">
+      <p>© <span id="year"></span> Nikhil Kumar • All Rights Reserved</p>
+      <p class="small-note">Made with ❤️ using HTML, CSS & JavaScript</p>
+    </div>
+  </footer>
+
+  <button id="topBtn" title="Go Top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
