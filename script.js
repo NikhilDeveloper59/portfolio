@@ -34,11 +34,12 @@ themeBtn.addEventListener("click", () => {
 // ====== Typing Effect ======
 const typingText = document.getElementById("typingText");
 const roles = [
-  "Software Developer",
-  "DSA with C++",
-  "Frontend Developer",
+  "AI/ML Engineer",
+  "Full Stack Developer",
   "Python Developer",
-  "AI Projects Learner"
+  "Machine Learning Enthusiast",
+  "Flask & NLP Developer",
+  "DSA with C++"
 ];
 
 let roleIndex = 0;
