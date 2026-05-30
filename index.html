@@ -21,21 +21,39 @@
 <body>
 
 
-<!-- ===== Loader ===== -->
+<!-- ===== PREMIUM LOADER ===== -->
 <div id="loader">
 
-  <div class="loader-content">
+  <div class="loader-bg"></div>
+
+  <div class="loader-card">
+
+    <div class="loader-ring">
+
+     <div class="loader-ring-inner">
+      <img src="profile.jpg" alt="Nikhil">
+    </div>
+
+    </div>
 
     <h1 class="loader-logo">
       Nikhil<span>.</span>
     </h1>
 
     <p class="loader-text">
-      AI Engineer • Software Developer
+      Building Intelligent Digital Experiences
     </p>
 
-    <div class="loader-bar">
-      <span></span>
+    <div class="loader-progress">
+
+      <div class="loader-bar">
+        <span id="loaderFill"></span>
+      </div>
+
+      <div class="loader-percent" id="loaderPercent">
+        0%
+      </div>
+
     </div>
 
   </div>
@@ -452,6 +470,7 @@
 
     <div class="skills-grid">
 
+
       <!-- CARD 1 -->
       <div class="skill-card reveal">
 
@@ -533,7 +552,7 @@
       </div>
 
       <!-- CARD 3 -->
-      <div class="skill-card reveal">
+      <div class="skill-card reveal mobile-hidden-skill">
 
         <div class="skill-header">
           <div class="skill-icon">
@@ -560,7 +579,7 @@
       </div>
 
       <!-- CARD 4 -->
-      <div class="skill-card reveal">
+      <div class="skill-card reveal mobile-hidden-skill">
 
         <div class="skill-header">
           <div class="skill-icon">
@@ -585,6 +604,11 @@
 
       </div>
 
+    </div>
+    <div class="mobile-view-more">
+      <button id="showSkillsBtn" class="view-more-btn">
+        View All Skills
+      </button>
     </div>
 
   </div>
@@ -685,7 +709,7 @@
       </div>
 
       <!-- PROJECT 3 -->
-      <div class="project-card reveal" data-category="python ai">
+      <div class="project-card reveal mobile-hidden-project" data-category="python ai">
 
         <div class="project-image">
           <img src="jarvis-ai.jpg" alt="Jarvis AI Assistant">
@@ -718,7 +742,7 @@
       </div>
 
       <!-- PROJECT 4 -->
-      <div class="project-card reveal" data-category="ai">
+      <div class="project-card reveal mobile-hidden-project" data-category="ai">
 
         <div class="project-image">
           <img src="house-price-prediction.jpg" alt="House Price Prediction">
@@ -751,7 +775,7 @@
       </div>
 
       <!-- PROJECT 5 -->
-      <div class="project-card reveal" data-category="web">
+      <div class="project-card reveal mobile-hidden-project" data-category="web">
 
         <div class="project-image">
           <img src="ai-language-translator.jpg" alt="AI Translator">
@@ -783,7 +807,7 @@
       </div>
 
       <!-- PROJECT 6 -->
-      <div class="project-card reveal" data-category="web">
+      <div class="project-card reveal mobile-hidden-project" data-category="web">
 
         <div class="project-image">
           <img src="portfolio-website.jpg" alt="Portfolio Website">
@@ -815,6 +839,12 @@
         </div>
       </div>
 
+    </div>
+
+    <div class="mobile-view-more">
+      <button id="showProjectsBtn" class="view-more-btn">
+        View All Projects
+      </button>
     </div>
 
   </div>
@@ -946,7 +976,6 @@
   </div>
 
 </section>
-
 
 
   <!-- ===== Certifications ===== -->
@@ -1282,21 +1311,91 @@
 
   <button id="topBtn" title="Go Top"><i class="fa-solid fa-arrow-up"></i></button>
 
-  <script src="script.js"></script>
 
-  <script>
-window.addEventListener("load", () => {
 
-  setTimeout(() => {
+<script src="script.js"></script>
 
-    document
+<script>
+
+let progress = 0;
+
+const fill =
+document.getElementById("loaderFill");
+
+const percent =
+document.getElementById("loaderPercent");
+
+const interval = setInterval(()=>{
+
+  progress += 4;
+
+  fill.style.width =
+  progress + "%";
+
+  percent.innerHTML =
+  progress + "%";
+
+  if(progress >= 100){
+
+    clearInterval(interval);
+
+    setTimeout(()=>{
+
+      document
       .getElementById("loader")
       .classList.add("hide");
 
-  }, 1000);
+    },300);
+
+  }
+
+},50);
+
+
+const skillBtn =
+document.getElementById("showSkillsBtn");
+
+if(skillBtn){
+
+skillBtn.addEventListener("click",()=>{
+
+document
+.querySelectorAll(".mobile-hidden-skill")
+.forEach(card=>{
+
+card.classList.add("show-card");
 
 });
+
+skillBtn.style.display="none";
+
+});
+
+}
+
+
+const projectBtn =
+document.getElementById("showProjectsBtn");
+
+if(projectBtn){
+
+projectBtn.addEventListener("click",()=>{
+
+document
+.querySelectorAll(".mobile-hidden-project")
+.forEach(card=>{
+
+card.classList.add("show-card");
+
+});
+
+projectBtn.style.display="none";
+
+});
+
+}
 </script>
+
 </body>
 
 </html>
