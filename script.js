@@ -35,11 +35,18 @@ themeBtn.addEventListener("click", () => {
 const typingText = document.getElementById("typingText");
 const roles = [
   "AI/ML Engineer",
+
   "Full Stack Developer",
-  "Python Developer",
-  "Machine Learning Enthusiast",
-  "Flask & NLP Developer",
-  "DSA with C++"
+
+  "Python & Flask Developer",
+
+  "NLP Enthusiast",
+
+  "Machine Learning Engineer",
+
+  "Problem Solver | DSA in C++",
+
+  "Building Intelligent Web Applications"
 ];
 
 let roleIndex = 0;
@@ -103,22 +110,39 @@ filterBtns.forEach(btn => {
   });
 });
 
-// ====== Active Navbar ======
 const sections = document.querySelectorAll("section");
 const navItems = document.querySelectorAll(".nav-item");
 
 window.addEventListener("scroll", () => {
-  let current = "";
+
+  let currentSection = "";
 
   sections.forEach(section => {
-    const sectionTop = section.offsetTop - 130;
-    if (scrollY >= sectionTop) current = section.getAttribute("id");
+
+    const sectionTop = section.offsetTop - 200;
+    const sectionHeight = section.offsetHeight;
+
+    if (
+      window.scrollY >= sectionTop &&
+      window.scrollY < sectionTop + sectionHeight
+    ) {
+      currentSection = section.id;
+    }
+
   });
 
-  navItems.forEach(a => {
-    a.classList.remove("active");
-    if (a.getAttribute("href") === `#${current}`) a.classList.add("active");
+  navItems.forEach(link => {
+
+    link.classList.remove("active");
+
+    if (
+      link.getAttribute("href") === `#${currentSection}`
+    ) {
+      link.classList.add("active");
+    }
+
   });
+
 });
 
 // ====== Scroll To Top ======
@@ -177,3 +201,5 @@ form.addEventListener("submit", (e) => {
     form.reset();
   }
 });
+
+
