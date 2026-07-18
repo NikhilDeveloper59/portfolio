@@ -58,7 +58,7 @@ body{
 
 /* ✅ More consistent spacing */
 .section{
-  padding:80px 0;
+  padding:35px 0;
 }
 @media (max-width: 640px){
   .section{padding:64px 0;}
@@ -3860,117 +3860,12 @@ ul{list-style:none;}
 }
 
 /* =========================================================
-   LOCATION MAP SECTION
-========================================================= */
-
-.location-section{
-  position:relative;
-}
-
-/* Card */
-
-.map-card{
-
-  overflow:hidden;
-
-  border-radius:30px;
-
-  background: linear-gradient(
-    145deg,
-    rgba(255,255,255,0.08),
-    rgba(255,255,255,0.03)
-  );
-
-  border:1px solid var(--border);
-
-  box-shadow:var(--shadow);
-
-  transition:0.35s ease;
-}
-
-/* Light Mode */
-
-.light .map-card{
-  background: linear-gradient(
-    145deg,
-    rgba(255,255,255,0.75),
-    rgba(255,255,255,0.45)
-  );
-}
-
-.map-card:hover{
-
-  transform:translateY(-8px);
-
-  border-color:rgba(0,198,255,0.30);
-
-  box-shadow:
-  0 20px 45px rgba(0,0,0,.18),
-  0 0 25px rgba(0,198,255,.12);
-}
-
-/* Info Bar */
-
-.map-info{
-
-  display:flex;
-  justify-content:center;
-  gap:30px;
-  flex-wrap:wrap;
-
-  padding:22px;
-
-  border-bottom:1px solid var(--border);
-}
-
-.map-item{
-
-  display:flex;
-  align-items:center;
-  gap:10px;
-
-  font-weight:600;
-}
-
-.map-item i{
-  color:var(--primary);
-}
-
-/* Map */
-
-.map-wrapper{
-  width:100%;
-  height:450px;
-}
-
-.map-wrapper iframe{
-  width:100%;
-  height:100%;
-  border:none;
-}
-
-/* Mobile */
-
-@media(max-width:768px){
-
-  .map-wrapper{
-    height:320px;
-  }
-
-  .map-info{
-    flex-direction:column;
-    align-items:center;
-    gap:14px;
-  }
-}
-
-/* =========================================================
    PROFESSIONAL FOOTER
 ========================================================= */
 
 .footer{
 
-  margin-top:60px;
+  margin-top:20px;
 
   position:relative;
 
