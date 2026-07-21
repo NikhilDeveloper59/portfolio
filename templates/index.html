@@ -135,7 +135,7 @@
           View Projects
         </a>
 
-        <a class="btn outline" href="resume.pdf" target="_blank">
+        <a class="btn outline" href="{{ url_for('static', filename='resume.pdf') }}" target="_blank">
           <i class="fa-solid fa-eye"></i>
           View Resume
         </a>
@@ -260,7 +260,7 @@
             Contact Me
           </a>
 
-          <a href="resume.pdf"
+          <a href="{{ url_for('static', filename='resume.pdf') }}"
             target="_blank"
             class="btn outline w-full">
 
