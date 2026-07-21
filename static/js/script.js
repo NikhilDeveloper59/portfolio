@@ -155,51 +155,72 @@ topBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// ====== Contact Form Validation ======
 const form = document.getElementById("contactForm");
 const successMsg = document.getElementById("successMsg");
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
+form.addEventListener("submit", async function (e) {
 
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const subject = document.getElementById("subject").value.trim();
-  const message = document.getElementById("message").value.trim();
+    e.preventDefault();
 
-  let valid = true;
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const subject = document.getElementById("subject").value.trim();
+    const message = document.getElementById("message").value.trim();
 
-  document.getElementById("nameError").textContent = "";
-  document.getElementById("emailError").textContent = "";
-  document.getElementById("subjectError").textContent = "";
-  document.getElementById("messageError").textContent = "";
-  successMsg.textContent = "";
+    if(name.length < 3){
+        document.getElementById("nameError").textContent="Enter valid name";
+        return;
+    }
 
-  if (name.length < 3) {
-    document.getElementById("nameError").textContent = "Enter valid name (min 3 characters)";
-    valid = false;
-  }
+    if(subject.length < 5){
+        document.getElementById("subjectError").textContent="Enter valid subject";
+        return;
+    }
 
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
-    document.getElementById("emailError").textContent = "Enter valid email";
-    valid = false;
-  }
+    if(message.length < 10){
+        document.getElementById("messageError").textContent="Message too short";
+        return;
+    }
 
-  if (subject.length < 5) {
-    document.getElementById("subjectError").textContent = "Enter subject (min 5 characters)";
-    valid = false;
-  }
+    try{
 
-  if (message.length < 10) {
-    document.getElementById("messageError").textContent = "Message must be at least 10 characters";
-    valid = false;
-  }
+        const response = await fetch("http://127.0.0.1:5000/contact",{
 
-  if (valid) {
-    successMsg.textContent = "✅ Message submitted successfully! (Frontend demo)";
-    form.reset();
-  }
+            method:"POST",
+
+            headers:{
+                "Content-Type":"application/json"
+            },
+
+            body:JSON.stringify({
+                name,
+                email,
+                subject,
+                message
+            })
+
+        });
+
+        const result = await response.json();
+
+        if(result.success){
+
+            successMsg.innerHTML="✅ Message Sent Successfully";
+
+            form.reset();
+
+        }else{
+
+            successMsg.innerHTML=result.message;
+
+        }
+
+    }catch(error){
+
+        console.log(error);
+
+        successMsg.innerHTML="❌ Server Error";
+
+    }
+
 });
-
-

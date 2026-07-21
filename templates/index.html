@@ -11,7 +11,7 @@
   content="Nikhil Kumar, AI Engineer, Python Developer, Full Stack Developer, Portfolio">
   <title>Nikhil Kumar | Portfolio</title>
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="static/css/style.css">
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1034/1034131.png" />
 
   <!-- Font Awesome -->
@@ -31,7 +31,7 @@
     <div class="loader-ring">
 
      <div class="loader-ring-inner">
-      <img src="profile.jpeg" alt="Nikhil">
+      <img src="static/images/profile.jpeg" alt="Nikhil">
     </div>
 
     </div>
@@ -194,7 +194,7 @@
             <div class="ring-light"></div>
 
             <div class="pro-img">
-              <img src="profile.jpeg" alt="Nikhil Kumar">
+              <img src="static/images/profile.jpeg" alt="Nikhil Kumar">
             </div>
 
           </div>
@@ -646,7 +646,7 @@
       <div class="project-card reveal" data-category="ai python">
 
         <div class="project-image">
-          <img src="eduvision-ai.jpg" alt="EduVision AI">
+          <img src="static/images/eduvision-ai.jpg" alt="EduVision AI">
         </div>
 
         <div class="project-content">
@@ -679,7 +679,7 @@
       <div class="project-card reveal" data-category="ai python">
 
         <div class="project-image">
-          <img src="smart-college-assistant.jpg" alt="Smart College Assistant">
+          <img src="static/images/smart-college-assistant.jpg" alt="Smart College Assistant">
         </div>
 
         <div class="project-content">
@@ -712,7 +712,7 @@
       <div class="project-card reveal mobile-hidden-project" data-category="python ai">
 
         <div class="project-image">
-          <img src="jarvis-ai.jpg" alt="Jarvis AI Assistant">
+          <img src="static/images/jarvis-ai.jpg" alt="Jarvis AI Assistant">
         </div>
 
         <div class="project-content">
@@ -745,7 +745,7 @@
       <div class="project-card reveal mobile-hidden-project" data-category="ai">
 
         <div class="project-image">
-          <img src="house-price-prediction.jpg" alt="House Price Prediction">
+          <img src="static/images/house-price-prediction.jpg" alt="House Price Prediction">
         </div>
 
         <div class="project-content">
@@ -778,7 +778,7 @@
       <div class="project-card reveal mobile-hidden-project" data-category="web">
 
         <div class="project-image">
-          <img src="ai-language-translator.jpg" alt="AI Translator">
+          <img src="static/images/ai-language-translator.jpg" alt="AI Translator">
         </div>
 
         <div class="project-content">
@@ -810,7 +810,7 @@
       <div class="project-card reveal mobile-hidden-project" data-category="web">
 
         <div class="project-image">
-          <img src="portfolio-website.jpg" alt="Portfolio Website">
+          <img src="static/images/portfolio-website.jpg" alt="Portfolio Website">
         </div>
 
         <div class="project-content">
@@ -850,7 +850,6 @@
   </div>
 
 </section>
-
 
 
 <!-- ===== Education ===== -->
@@ -1105,11 +1104,8 @@
           <div class="form-group">
             <label>Your Name</label>
 
-            <input
-              type="text"
-              id="name"
-              placeholder="Enter your name"
-            />
+            <input type="text" id="name" name="name"
+              placeholder="Enter your name"/>
 
             <small class="error" id="nameError"></small>
           </div>
@@ -1117,11 +1113,8 @@
           <div class="form-group">
             <label>Email Address</label>
 
-            <input
-              type="email"
-              id="email"
-              placeholder="Enter your email"
-            />
+            <input type="email" id="email" name="email"
+              placeholder="Enter your email"/>
 
             <small class="error" id="emailError"></small>
           </div>
@@ -1134,9 +1127,8 @@
 
           <input
             type="text"
-            id="subject"
-            placeholder="Ex: Internship Opportunity"
-          />
+            id="subject" name="subject"
+            placeholder="Ex: Internship Opportunity"/>
 
           <small class="error" id="subjectError"></small>
 
@@ -1146,22 +1138,16 @@
 
           <label>Message</label>
 
-          <textarea
-            id="message"
-            rows="6"
-            placeholder="Write your message..."
-          ></textarea>
+          <textarea id="message" name="message" rows="6"
+            placeholder="Write your message..."></textarea>
 
           <small class="error" id="messageError"></small>
 
         </div>
 
         <button type="submit" class="contact-btn">
-
           <i class="fa-solid fa-paper-plane"></i>
-
           Send Message
-
         </button>
 
         <p class="success" id="successMsg"></p>
@@ -1265,7 +1251,7 @@
 
 
 
-<script src="script.js"></script>
+<script src="static/js/script.js"></script>
 
 <script>
 
